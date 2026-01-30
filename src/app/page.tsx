@@ -1,12 +1,17 @@
 import { Section } from "@/components/layout/Section";
 import { MapWrapper } from "@/components/maps/MapWrapper";
 
+import HeroSlider from "@/features/home/HeroSlider";
+
 export default function Home() {
   return (
     <div className="space-y-20 pb-20">
-      {/* Hero Section */}
-      <Section className="py-20 text-center space-y-6">
-        <h1 className="text-5xl font-bold tracking-tight">
+      {/* Hero Slider Section */}
+      <HeroSlider />
+
+      {/* Intro Text Section */}
+      <Section className="py-10 text-center space-y-6">
+        <h1 className="text-4xl font-bold tracking-tight">
           Welcome to OpenSixty
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
