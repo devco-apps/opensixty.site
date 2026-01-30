@@ -76,9 +76,9 @@ export function NavBar() {
             {/* Info Blocks */}
             <div className="flex items-center gap-8">
               <div className="flex items-start gap-3">
-                <MapPin className="w-6 h-6 text-[#0a192f] mt-1" />
+                <MapPin className="w-6 h-6 text-secondary mt-1" />
                 <div className="flex flex-col">
-                  <span className="text-sm font-bold text-[#0a192f]">
+                  <span className="text-sm font-bold text-secondary">
                     Our Address
                   </span>
                   <span className="text-xs text-gray-500">
@@ -88,15 +88,15 @@ export function NavBar() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail className="w-6 h-6 text-[#0a192f] mt-1" />
+                <Mail className="w-6 h-6 text-secondary mt-1" />
                 <div className="flex flex-col">
-                  <span className="text-sm font-bold text-[#0a192f]">
+                  <span className="text-sm font-bold text-secondary">
                     Email Us
                   </span>
                   <span className="text-xs text-gray-500">
                     <a
                       href="mailto:contactus@opensixty.co.zw"
-                      className="hover:text-yellow-500 transition-colors"
+                      className="hover:text-primary transition-colors"
                     >
                       contactus@opensixty.co.zw
                     </a>
@@ -105,17 +105,17 @@ export function NavBar() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-6 h-6 text-[#0a192f] mt-1" />
+                <Phone className="w-6 h-6 text-secondary mt-1" />
                 <div className="flex flex-col">
-                  <span className="text-sm font-bold text-[#0a192f]">
-                    Call Us Today
+                  <span className="text-sm font-bold text-secondary">
+                    Call Us
                   </span>
                   <span className="text-xs text-gray-500">
                     <a
-                      href="tel:+263789579040"
-                      className="hover:text-yellow-500 transition-colors"
+                      href="tel:+263772277026"
+                      className="hover:text-primary transition-colors"
                     >
-                      +263 78 957 9040
+                      +263 772 277 026
                     </a>
                   </span>
                 </div>
@@ -153,23 +153,23 @@ export function NavBar() {
               <div key={link.label} className="relative group">
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1 text-[15px] font-bold text-[#0a192f] hover:text-yellow-500 transition-colors py-6"
+                  className="flex items-center gap-1 text-[15px] font-bold text-secondary hover:text-primary transition-colors py-6"
                 >
                   {link.label}
                   {link.hasDropdown && (
-                    <ChevronDown className="w-3 h-3 text-gray-400 group-hover:text-yellow-500 transition-colors" />
+                    <ChevronDown className="w-3 h-3 text-gray-400 group-hover:text-primary transition-colors" />
                   )}
                 </Link>
 
                 {/* Desktop Dropdown */}
                 {link.hasDropdown && link.dropdownItems && (
-                  <div className="absolute top-full left-0 w-64 bg-white shadow-xl border-t-2 border-yellow-400 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                  <div className="absolute top-full left-0 w-64 bg-white shadow-xl border-t-2 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                     <div className="py-2">
                       {link.dropdownItems.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="block px-6 py-3 text-sm text-[#0a192f] hover:bg-gray-50 hover:text-yellow-500 transition-colors border-b border-gray-50 last:border-0"
+                          className="block px-6 py-3 text-sm text-secondary hover:bg-gray-50 hover:text-primary transition-colors border-b border-gray-50 last:border-0"
                         >
                           {item.label}
                         </Link>
@@ -185,14 +185,14 @@ export function NavBar() {
           <div className="flex items-center gap-6">
             <Link
               href="/contact"
-              className="hidden md:flex bg-yellow-400 hover:bg-yellow-500 text-[#0a192f] text-xs font-bold px-6 py-3 uppercase tracking-wider transition-colors"
+              className="hidden md:flex bg-primary hover:bg-primary/90 text-white text-xs font-bold px-6 py-3 uppercase tracking-wider transition-colors shadow-sm"
             >
               Contact Us
             </Link>
 
             {/* Mobile Menu Toggle */}
             <button
-              className="md:hidden p-2 text-[#0a192f]"
+              className="md:hidden p-2 text-secondary"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
@@ -213,12 +213,12 @@ export function NavBar() {
           >
             <div className="p-6 flex flex-col gap-6">
               <div className="flex justify-between items-center border-b pb-4">
-                <span className="text-xl font-bold text-[#0a192f]">Menu</span>
+                <span className="text-xl font-bold text-secondary">Menu</span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 hover:bg-gray-100 rounded-full"
                 >
-                  <X className="w-6 h-6 text-[#0a192f]" />
+                  <X className="w-6 h-6 text-secondary" />
                 </button>
               </div>
 
@@ -231,7 +231,7 @@ export function NavBar() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={link.href}
-                        className="flex-1 py-3 text-[#0a192f] font-bold hover:text-yellow-500 transition-colors"
+                        className="flex-1 py-3 text-secondary font-bold hover:text-primary transition-colors"
                         onClick={() =>
                           !link.hasDropdown && setIsMobileMenuOpen(false)
                         }
@@ -241,7 +241,7 @@ export function NavBar() {
                       {link.hasDropdown && (
                         <button
                           onClick={() => toggleMobileExpand(link.label)}
-                          className="p-3 text-gray-400 hover:text-yellow-500"
+                          className="p-3 text-gray-400 hover:text-primary"
                         >
                           <ChevronDown
                             className={cn(
@@ -269,7 +269,7 @@ export function NavBar() {
                                 <Link
                                   key={item.href}
                                   href={item.href}
-                                  className="pl-6 py-2 text-sm text-gray-600 hover:text-yellow-500 transition-colors"
+                                  className="pl-6 py-2 text-sm text-gray-600 hover:text-primary transition-colors"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   {item.label}
@@ -284,17 +284,19 @@ export function NavBar() {
               </nav>
 
               <div className="flex flex-col gap-4 mt-4">
-                <div className="flex items-center gap-3 text-[#0a192f]">
+                <div className="flex items-center gap-3 text-secondary">
                   <Phone className="w-5 h-5" />
-                  <span className="font-medium">548-661-322</span>
+                  <span className="font-medium">+263 772 277 026</span>
                 </div>
-                <div className="flex items-center gap-3 text-[#0a192f]">
+                <div className="flex items-center gap-3 text-secondary">
                   <MapPin className="w-5 h-5" />
-                  <span className="font-medium">125 Golden St, New York</span>
+                  <span className="font-medium">
+                    11 Rhodesville Rd, Eastlea
+                  </span>
                 </div>
                 <Link
                   href="/contact"
-                  className="bg-yellow-400 text-[#0a192f] text-center font-bold py-3 uppercase tracking-wider hover:bg-yellow-500 transition-colors"
+                  className="bg-primary text-white text-center font-bold py-3 uppercase tracking-wider hover:bg-primary/90 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact Us
@@ -313,7 +315,7 @@ export function NavBar() {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="fixed inset-0 bg-black z-40 md:hidden"
+            className="fixed inset-0 bg-secondary z-40 md:hidden"
           />
         )}
       </AnimatePresence>

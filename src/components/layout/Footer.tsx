@@ -16,10 +16,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a192f] text-white py-16">
+    <footer className="bg-secondary text-white py-16">
       <Section>
         {/* Footer Top */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-800 pb-8 mb-12 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-12 gap-6">
           <div className="flex-shrink-0">
             <Image
               src="/images/logo-text-dark.svg"
@@ -35,7 +35,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-yellow-500 transition-colors"
+              className="hover:text-primary transition-colors"
             >
               <Facebook size={24} />
             </a>
@@ -44,7 +44,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-yellow-500 transition-colors"
+              className="hover:text-primary transition-colors"
             >
               <Instagram size={24} />
             </a>
@@ -53,7 +53,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="hover:text-yellow-500 transition-colors"
+              className="hover:text-primary transition-colors"
             >
               <Youtube size={24} />
             </a>
@@ -62,7 +62,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-yellow-500 transition-colors"
+              className="hover:text-primary transition-colors"
             >
               <Linkedin size={24} />
             </a>
@@ -72,7 +72,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Col 1: About Company */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold border-b-2 border-yellow-500 inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
               About Company
             </h3>
             <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
@@ -85,7 +85,7 @@ export function Footer() {
                 integration &amp; expert ancillary services.
               </p>
               <div className="pt-4">
-                <div className="bg-white text-[#0a192f] font-bold p-3 rounded-md inline-flex items-center gap-2 border border-gray-200">
+                <div className="bg-white text-secondary font-bold p-3 rounded-md inline-flex items-center gap-2 border border-gray-200">
                   <span className="text-2xl">★</span>
                   <div className="leading-tight">
                     <div className="text-xs uppercase">Accredited</div>
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Col 2: Useful Links */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-yellow-500 inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
               Useful Links
             </h3>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -113,9 +113,9 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="hover:text-yellow-500 flex items-center gap-2 transition-colors"
+                    className="hover:text-primary flex items-center gap-2 transition-colors"
                   >
-                    <ChevronRight size={14} className="text-yellow-500" />
+                    <ChevronRight size={14} className="text-primary" />
                     {link.label}
                   </Link>
                 </li>
@@ -125,12 +125,12 @@ export function Footer() {
 
           {/* Col 3: Contact Info */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-yellow-500 inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
               Contact Info
             </h3>
             <ul className="space-y-6 text-sm text-gray-400">
               <li className="flex items-center gap-3">
-                <MapPin size={20} className="text-yellow-500 shrink-0" />
+                <MapPin size={20} className="text-primary shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-white">Address</p>
                   <p>11 Rhodesville Rd, Eastlea</p>
@@ -138,7 +138,7 @@ export function Footer() {
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={20} className="text-yellow-500 shrink-0" />
+                <Phone size={20} className="text-primary shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-white">
                     Support &amp; Sales
@@ -148,7 +148,7 @@ export function Footer() {
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Clock size={20} className="text-yellow-500 shrink-0" />
+                <Clock size={20} className="text-primary shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-white">
                     Business Hours:{" "}
@@ -157,7 +157,7 @@ export function Footer() {
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="text-yellow-500 shrink-0" />
+                <Mail size={20} className="text-primary shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-white">Email</p>
                   <p>contactus@opensixty.co.zw</p>
@@ -168,12 +168,12 @@ export function Footer() {
 
           {/* Col 4: Services Offered */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-yellow-500 inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
               Services Offered
             </h3>
             <div className="flex flex-col gap-0 space-y-6 text-sm text-gray-400">
               <div className="group">
-                <h4 className="text-white font-semibold group-hover:text-yellow-500 transition-colors cursor-pointer">
+                <h4 className="text-white font-semibold group-hover:text-primary transition-colors cursor-pointer">
                   Construction & Engineering
                 </h4>
                 <p className="line-clamp-2">
@@ -181,8 +181,8 @@ export function Footer() {
                   maintenance across the region.
                 </p>
               </div>
-              <div className="group border-t border-gray-800 pt-4">
-                <h4 className="text-white font-semibold group-hover:text-yellow-500 transition-colors cursor-pointer">
+              <div className="group border-t border-gray-700 pt-4">
+                <h4 className="text-white font-semibold group-hover:text-primary transition-colors cursor-pointer">
                   Logistics & Supply Chain
                 </h4>
                 <p className="line-clamp-2">
@@ -190,8 +190,8 @@ export function Footer() {
                   seamless industrial operations.
                 </p>
               </div>
-              <div className="group border-t border-gray-800 pt-4">
-                <h4 className="text-white font-semibold group-hover:text-yellow-500 transition-colors cursor-pointer">
+              <div className="group border-t border-gray-700 pt-4">
+                <h4 className="text-white font-semibold group-hover:text-primary transition-colors cursor-pointer">
                   Commodity Broking
                 </h4>
                 <p className="line-clamp-2">
@@ -204,21 +204,21 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <div>
             © {new Date().getFullYear()} OpenSixty. All rights reserved.
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-yellow-500 transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               <Facebook size={18} />
             </a>
-            <a href="#" className="hover:text-yellow-500 transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               <Twitter size={18} />
             </a>
-            <a href="#" className="hover:text-yellow-500 transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               <Instagram size={18} />
             </a>
-            <a href="#" className="hover:text-yellow-500 transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               <Linkedin size={18} />
             </a>
           </div>

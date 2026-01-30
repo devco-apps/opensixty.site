@@ -14,10 +14,10 @@ export default function Home() {
           strict type-safety and modular UI primitives.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition-colors cursor-pointer">
+          <button className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors cursor-pointer shadow-sm">
             Get Started
           </button>
-          <button className="border border-gray-300 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors cursor-pointer">
+          <button className="border border-gray-300 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors cursor-pointer text-secondary">
             Learn More
           </button>
         </div>
@@ -35,7 +35,7 @@ export default function Home() {
                 key={i}
                 className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">
+                <div className="w-12 h-12 bg-accent/20 rounded-lg mb-4 flex items-center justify-center text-secondary font-bold">
                   {i}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Feature {i}</h3>
