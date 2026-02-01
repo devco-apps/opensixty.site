@@ -20,7 +20,7 @@ export function Footer() {
       <Section>
         {/* Footer Top */}
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-12 gap-6">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Image
               src="/images/logo-text-dark.svg"
               alt="OpenSixty Logo"
@@ -72,8 +72,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Col 1: About Company */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b border-gray-700 w-full inline-block mb-6">
               About Company
+              <div className="h-1 w-20 bg-primary mt-2" />
             </h3>
             <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
               <p>
@@ -98,8 +99,9 @@ export function Footer() {
 
           {/* Col 2: Useful Links */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b border-gray-700 w-full inline-block mb-6">
               Useful Links
+              <div className="h-1 w-20 bg-primary mt-2" />
             </h3>
             <ul className="space-y-3 text-sm text-gray-400">
               {[
@@ -125,8 +127,9 @@ export function Footer() {
 
           {/* Col 3: Contact Info */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b border-gray-700 w-full inline-block mb-6">
               Contact Info
+              <div className="h-1 w-20 bg-primary mt-2" />
             </h3>
             <ul className="space-y-6 text-sm text-gray-400">
               <li className="flex items-center gap-3">
@@ -168,8 +171,9 @@ export function Footer() {
 
           {/* Col 4: Services Offered */}
           <div>
-            <h3 className="text-xl font-bold border-b-2 border-primary inline-block pb-2 mb-6">
+            <h3 className="text-xl font-bold border-b border-gray-700 w-full inline-block mb-6">
               Services Offered
+              <div className="h-1 w-20 bg-primary mt-2" />
             </h3>
             <div className="flex flex-col gap-0 space-y-6 text-sm text-gray-400">
               <div className="group">
