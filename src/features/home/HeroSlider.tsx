@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import WireButton from "@/components/buttons/WireButton";
 
 /**
@@ -92,6 +93,17 @@ const HeroSlider = () => {
   // Each number represents the category index that column is currently showing
   const [columnCategoryIndices, setColumnCategoryIndices] = useState([0, 0, 0]);
 
+  // Navigation Handlers
+  const handleNext = () => {
+    setTargetCategoryIndex((prev) => (prev + 1) % SLIDER_DATA.length);
+  };
+
+  const handlePrev = () => {
+    setTargetCategoryIndex(
+      (prev) => (prev - 1 + SLIDER_DATA.length) % SLIDER_DATA.length,
+    );
+  };
+
   useEffect(() => {
     // Cycle categories every 6 seconds
     const interval = setInterval(() => {
@@ -99,7 +111,7 @@ const HeroSlider = () => {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetCategoryIndex]); // Reset timer on user interaction
 
   useEffect(() => {
     // When target category changes, update columns sequentially with a stagger delay
@@ -126,7 +138,7 @@ const HeroSlider = () => {
 
   return (
     <motion.div
-      className="w-full h-[100dvh] md:h-[60vh] min-h-[500px] flex flex-col md:flex-row overflow-hidden bg-black"
+      className="w-full h-[100dvh] md:h-[60vh] min-h-[500px] flex flex-col md:flex-row overflow-hidden bg-black relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -197,6 +209,34 @@ const HeroSlider = () => {
           </motion.div>
         );
       })}
+
+      {/* Navigation Controls */}
+      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-30 flex items-center gap-6 text-white">
+        {/* Arrow Buttons */}
+        <div className="flex gap-4">
+          <button
+            onClick={handlePrev}
+            aria-label="Previous slide"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={handleNext}
+            aria-label="Next slide"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Progress Indicator */}
+        <div className="hidden md:flex items-center gap-4 font-mono text-lg font-medium tracking-widest">
+          <span>0{targetCategoryIndex + 1}</span>
+          <div className="w-16 h-0.5 bg-white/50" />
+          <span className="opacity-60">0{SLIDER_DATA.length}</span>
+        </div>
+      </div>
     </motion.div>
   );
 };
