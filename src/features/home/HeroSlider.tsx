@@ -24,40 +24,40 @@ const SLIDER_DATA = [
   {
     id: "construction",
     title: "CONSTRUCTION",
-    description: "Building the foundation for tomorrow.",
+    description: "Expert infrastructure developers.",
     color: "bg-blue-900",
     link: "/services/construction-infrastructure",
     duration: 2.1,
     images: [
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1590986475596-51e0692afc75?q=80&w=1000&auto=format&fit=crop",
+      "/images/slider/construct-1.webp",
+      "/images/slider/construct-2.webp",
+      "/images/slider/construct-3.webp",
     ],
   },
   {
     id: "transport",
     title: "TRANSPORT",
-    description: "Moving the world forward efficiently.",
+    description: "Reliable, efficient and professional.",
     color: "bg-blue-900",
     link: "/services/transport-logistics",
     duration: 1.7,
     images: [
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1494412574643-35d324698420?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=1000&auto=format&fit=crop",
+      "/images/slider/transport-1.webp",
+      "/images/slider/transport-2.webp",
+      "/images/slider/transport-3.webp",
     ],
   },
   {
     id: "commodities",
     title: "COMMODITIES",
-    description: "Essential resources for global growth.",
+    description: "Your partner for sustainable growth.",
     color: "bg-blue-900",
     link: "/services/commodity-broking",
     duration: 1.3,
     images: [
-      "https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558583055-d7ac00b1adca?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1574607383476-f517f260d30b?q=80&w=1000&auto=format&fit=crop",
+      "/images/slider/commodity-1.webp",
+      "/images/slider/commodity-2.webp",
+      "/images/slider/commodity-3.webp",
     ],
   },
 ];
@@ -138,7 +138,7 @@ const HeroSlider = () => {
 
   return (
     <motion.div
-      className="w-full h-[100dvh] md:h-[60vh] min-h-[500px] flex flex-col md:flex-row overflow-hidden bg-black relative"
+      className="w-full h-dvh md:h-[60vh] min-h-[500px] flex flex-col md:flex-row overflow-hidden bg-black relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -172,8 +172,8 @@ const HeroSlider = () => {
                   <div
                     className={`absolute inset-0 ${category.color} opacity-40 mix-blend-multiply z-10`}
                   />
-                  <div className="absolute inset-0 bg-black/30 z-10" />{" "}
                   {/* Darken for text readability */}
+                  <div className="absolute inset-0 bg-black/45 z-10" />{" "}
                   <Image
                     src={imageSrc}
                     alt={category.title}
@@ -197,8 +197,8 @@ const HeroSlider = () => {
                 >
                   <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4 uppercase">
                     {category.title}
-                    <div className="h-1 w-20 bg-white/80 mb-4" />
                   </h2>
+                  <div className="h-1 w-20 bg-primary/80 mb-4" />
                   <p className="text-white/90 text-lg font-medium max-w-xs mb-8">
                     {category.description}
                   </p>
@@ -217,24 +217,33 @@ const HeroSlider = () => {
           <button
             onClick={handlePrev}
             aria-label="Previous slide"
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
+            // className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 text-secondary transition-colors duration-300 cursor-pointer"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={handleNext}
             aria-label="Next slide"
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/80 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300 backdrop-blur-sm cursor-pointer"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Progress Indicator */}
-        <div className="hidden md:flex items-center gap-4 font-mono text-lg font-medium tracking-widest">
+        <div className="flex items-center gap-4 font-mono text-lg font-medium tracking-widest text-white">
           <span>0{targetCategoryIndex + 1}</span>
-          <div className="w-16 h-0.5 bg-white/50" />
-          <span className="opacity-60">0{SLIDER_DATA.length}</span>
+          <div className="w-24 h-1 bg-gray-200 rounded-full overflow-hidden relative">
+            <motion.div
+              key={targetCategoryIndex}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 6, ease: "linear" }}
+              className="h-full bg-primary"
+            />
+          </div>
+          <span className="">0{SLIDER_DATA.length}</span>
         </div>
       </div>
     </motion.div>
