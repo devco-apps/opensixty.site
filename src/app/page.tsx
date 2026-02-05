@@ -1,7 +1,10 @@
 import { Section } from "@/components/layout/Section";
 import { MapWrapper } from "@/components/maps/MapWrapper";
+import TransportBanner from "@/features/home/TransportBanner";
 
 import HeroSlider from "@/features/home/HeroSlider";
+import Introduction from "@/features/home/Introduction";
+import OurPromise from "@/features/home/OurPromise";
 
 export default function Home() {
   return (
@@ -9,24 +12,12 @@ export default function Home() {
       {/* Hero Slider Section */}
       <HeroSlider />
 
-      {/* Intro Text Section */}
-      <Section className="py-10 text-center space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight">
-          Welcome to OpenSixty
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          A high-performance, scalable Next.js 15+ application architecture with
-          strict type-safety and modular UI primitives.
-        </p>
-        <div className="flex justify-center gap-4">
-          <button className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors cursor-pointer shadow-sm">
-            Get Started
-          </button>
-          <button className="border border-gray-300 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors cursor-pointer text-secondary">
-            Learn More
-          </button>
-        </div>
-      </Section>
+      {/* Introduction Section */}
+      <Introduction />
+
+      <TransportBanner />
+
+      <OurPromise />
 
       {/* Feature Section to enable scrolling */}
       <Section variant="wide" className="bg-gray-50 py-20">
