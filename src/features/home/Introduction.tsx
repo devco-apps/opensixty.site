@@ -13,10 +13,10 @@ import Button from "@/components/buttons/Button";
 const Introduction: React.FC = () => {
   return (
     <Section
-      className="py-20 bg-background text-foreground overflow-hidden font-sans"
+      className="pt-20 bg-white text-foreground overflow-hidden font-sans"
       aria-labelledby="introduction-heading"
     >
-      <div className="mx-auto px-6 grid grid-cols-1 gap-12 items-center lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid grid-cols-1 gap-12 items-center lg:grid-cols-2 lg:gap-16">
         {/* Left Column: Content */}
         <motion.div
           className="relative z-10"
