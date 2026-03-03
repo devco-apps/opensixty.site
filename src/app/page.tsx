@@ -15,9 +15,9 @@ export default function Home() {
       {/* Introduction Section */}
       <Introduction />
 
-      <TransportBanner />
-
       <OurPromise />
+
+      <TransportBanner />
 
       {/* Feature Section to enable scrolling */}
       <Section variant="wide" className="bg-gray-50 py-20">
