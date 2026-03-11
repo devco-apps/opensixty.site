@@ -7,7 +7,7 @@ const promises = [
   {
     id: "pr-1",
     name: "Customer Satisfaction",
-    image: "",
+    image: "/images/home/dedicated-star.webp",
     description:
       "Your needs are our priority; your success is our standard. Through transparency and unwavering reliability, we don't just meet expectations — we exceed them.",
   },
@@ -15,15 +15,15 @@ const promises = [
     id: "pr-2",
     name: "Operational Excellence",
     link: "/services/transport",
-    image: "",
+    image: "/images/home/dedicated-badge.webp",
     description:
-      "We provide precision equipment engineered for construction, agriculture, and logistics. Combining world-class hardware with expertise, we ensure your operations are fully optimized for excellence.",
+      "We deliver expert industrial services for construction and logistics. By merging technical support with seamless integration, we ensure your operations are fully optimized for excellence.",
   },
   {
     id: "pr-3",
     name: "Blueprint for Resilient Growth",
     link: "/services/Commodities",
-    image: "",
+    image: "/images/home/dedicated-graph.webp",
     description:
       "We build lasting partnerships via sustainable practices, risk-aware strategies & operational excellence, enabling businesses to grow confidently across Africa's dynamic & evolving markets.",
   },
@@ -35,35 +35,27 @@ const OurPromise = () => {
   return (
     <Section variant="wide">
       <Section>
-        {/* <WatermarkHeader text="Our Promise" backText="Dedicated to" /> */}
-        <div className="pb-15 font-sans font-bold text-5xl uppercase leading-tight">
+        <div className="pb-15 font-sans font-bold text-4xl uppercase leading-tight">
           <p className="text-secondary/25">Dedicated to Our Promise</p>
-
-          {/* <div className="w-[108] h-1 bg-primary" /> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {promises.map((department) => (
-            <div
-              key={department.id}
-              className="bg-white hover:shadow-lg border border-secondary/10"
-            >
-              <div className="relative h-30 bg-accent/20 mb-4 flex items-center justify-center text-secondary font-bold">
+          {promises.map((promise) => (
+            <div key={promise.id} className="p-5">
+              <div className="relative w-[250px] h-[250px] mb-4 mx-auto">
                 <Image
-                  src="/images/slider/construct-1.webp"
-                  alt={department.name}
+                  src={promise.image}
+                  alt={promise.name}
                   fill
+                  className="object-contain"
                 />
-                {department.id}
               </div>
-              <div className="px-4 pb-4">
+              <div className="px-4 pb-4 text-center">
                 <h3 className="text-xl text-secondary font-semibold mb-2">
-                  {department.name}
+                  {promise.name}
                 </h3>
 
-                <p className="text-md text-gray-500">
-                  {department.description}
-                </p>
+                <p className="text-md text-gray-500">{promise.description}</p>
               </div>
             </div>
           ))}

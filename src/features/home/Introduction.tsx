@@ -47,18 +47,19 @@ const Introduction: React.FC = () => {
 
         {/* Right Column: Image */}
         <motion.div
-          className="relative w-full h-[400px] overflow-hidden"
+          className="relative w-full h-[400px] mt-20 overflow-hidden"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Image
-            src="/images/drum-roller.webp"
+            // src="/images/drum-roller.webp"
+            src="/images/home/intro-wheeler.webp"
             alt="Construction machinery operating on a road"
             fill
-            className="object-contain object-bottom w-full h-full"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain object-bottom w-full h-full z-20"
+            sizes="(max-width: 800px) 100vw, 50vw"
             priority={false}
           />
         </motion.div>
