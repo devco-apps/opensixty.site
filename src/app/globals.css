@@ -30,3 +30,61 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ─── Tab button: animated conic gradient border ─────────────── */
+.tab-btn-active {
+  --offset: 2px;
+  background: var(--secondary);
+  /* The base color of the button */
+  border-radius: 0;
+  /* Square corners */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  /* Lightened shadow for a cleaner look */
+  color: white;
+  border: none;
+}
+
+/* Conic gradient - creating the single moving line */
+.tab-btn-active::before {
+  content: "";
+  /* Create a sharp line that fades into transparency */
+  background: conic-gradient(transparent 270deg, var(--primary), transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  /* Fallback for wider buttons to ensure the aspect-ratio covers the edges */
+  min-width: 300px;
+  animation: rotate 2s linear infinite;
+}
+
+/* Overlay - covers the center to create the border effect */
+.tab-btn-active::after {
+  content: "";
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+}
+
+/* Ensure text sits above the overlay */
+.tab-btn-active .tab-btn-text {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
