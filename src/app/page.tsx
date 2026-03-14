@@ -6,6 +6,7 @@ import HeroSlider from "@/features/home/HeroSlider";
 import Introduction from "@/features/home/Introduction";
 import OurPromise from "@/features/home/OurPromise";
 import OurServices from "@/features/home/OurServices";
+import ProjectsGallery from "@/features/home/ProjectsGallery";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
       <TransportBanner />
 
       <OurServices />
+
+      {/* Projects Gallery Section for Construction */}
+      <ProjectsGallery />
     </div>
   );
 }
