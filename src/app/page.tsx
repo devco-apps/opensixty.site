@@ -7,6 +7,7 @@ import Introduction from "@/features/home/Introduction";
 import OurPromise from "@/features/home/OurPromise";
 import OurServices from "@/features/home/OurServices";
 import ProjectsGallery from "@/features/home/ProjectsGallery";
+import TransportService from "@/features/home/TransportService";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
 
       {/* Projects Gallery Section for Construction */}
       <ProjectsGallery />
+
+      {/* Transport Service Section */}
+      <TransportService />
     </div>
   );
 }
