@@ -9,7 +9,7 @@ import WorldMapSection from "@/features/home/WorldMapSection";
 
 export default function Home() {
   return (
-    <div className="pb-20">
+    <div className="w-full">
       {/* Hero Slider Section */}
       <HeroSlider />
 
