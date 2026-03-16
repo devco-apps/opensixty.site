@@ -1,0 +1,26 @@
+.trail {
+  width: calc(var(--trail-size) * 1cqmin);
+  aspect-ratio: 2 / 1;
+  position: absolute;
+  background: radial-gradient(
+    100% 100% at right,
+    var(--accent, red),
+    transparent 50%
+  );
+  offset-path: border-box;
+  offset-anchor: 100% 50%;
+  animation: journey var(--speed, 6s) infinite linear;
+  z-index: 2;
+}
+
+@container (width > 600px) {
+  .trail {
+    --speed: 12s;
+  }
+}
+
+@keyframes journey {
+  to {
+    offset-distance: 100%;
+  }
+}

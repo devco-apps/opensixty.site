@@ -1,13 +1,11 @@
-import { Section } from "@/components/layout/Section";
-import { MapWrapper } from "@/components/maps/MapWrapper";
-import TransportBanner from "@/features/home/TransportBanner";
-
 import HeroSlider from "@/features/home/HeroSlider";
 import Introduction from "@/features/home/Introduction";
 import OurPromise from "@/features/home/OurPromise";
 import OurServices from "@/features/home/OurServices";
 import ProjectsGallery from "@/features/home/ProjectsGallery";
 import TransportService from "@/features/home/TransportService";
+import TransportBanner from "@/features/home/TransportBanner";
+import WorldMapSection from "@/features/home/WorldMapSection";
 
 export default function Home() {
   return (
@@ -26,6 +24,8 @@ export default function Home() {
 
       {/* Projects Gallery Section for Construction */}
       <ProjectsGallery />
+
+      <WorldMapSection />
 
       {/* Transport Service Section */}
       <TransportService />
