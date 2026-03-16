@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { Section } from "@/components/layout/Section";
-import WatermarkHeader from "@/components/typography/WatermarkHeader";
 
 const promises = [
   {

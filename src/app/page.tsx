@@ -6,8 +6,13 @@ import ProjectsGallery from "@/features/home/ProjectsGallery";
 import TransportService from "@/features/home/TransportService";
 import TransportBanner from "@/features/home/TransportBanner";
 import WorldMapSection from "@/features/home/WorldMapSection";
+import PartnerLogos from "@/features/home/PartnerLogos";
+
+import { getFilesByPrefix } from "@/lib/server-utils";
 
 export default function Home() {
+  const partnerLogos = getFilesByPrefix("images/home", "partners-");
+
   return (
     <div className="w-full">
       {/* Hero Slider Section */}
@@ -29,6 +34,8 @@ export default function Home() {
 
       {/* Transport Service Section */}
       <TransportService />
+
+      <PartnerLogos logoPaths={partnerLogos} />
     </div>
   );
 }
