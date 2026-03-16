@@ -13,7 +13,7 @@ const WorldMapSection = () => {
         animationSpeed={10}
         noPadding
       >
-        <div className="relative w-full h-125">
+        <div className="relative w-full h-125 rounded-2xl overflow-clip">
           <Image
             src="/images/home/home-world-map.svg"
             alt="World map showing OpenSixty's global reach"
