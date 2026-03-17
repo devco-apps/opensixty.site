@@ -23,7 +23,7 @@ const TransportService = () => {
           {/* Right Solid Background */}
           <div className="relative w-full md:w-1/2 h-1/2 md:h-full">
             <Image
-              src="/images/home/project-d.webp"
+              src="/images/home/transport-trucks.webp"
               alt="Heavy Haulage Truck"
               fill
               className="object-cover object-center"
