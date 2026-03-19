@@ -9,6 +9,7 @@ import WorldMapSection from "@/features/home/WorldMapSection";
 import PartnerLogos from "@/features/home/PartnerLogos";
 
 import { getFilesByPrefix } from "@/lib/server-utils";
+import CallToAction from "@/features/home/CallToAction";
 
 export default function Home() {
   const partnerLogos = getFilesByPrefix("images/home", "partners-");
@@ -36,6 +37,8 @@ export default function Home() {
       <TransportService />
 
       <PartnerLogos logoPaths={partnerLogos} />
+
+      <CallToAction />
     </div>
   );
 }
