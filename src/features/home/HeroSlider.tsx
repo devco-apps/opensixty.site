@@ -245,8 +245,8 @@ const HeroSlider = () => {
                   >
                     <h2
                       className="
-                        text-3xl sm:text-4xl md:text-5xl
-                        font-bold text-white tracking-tighter
+                        text-3xl sm:text-4xl md:text-4xl
+                        font-bold font-heading text-white tracking-tighter
                         mb-3 uppercase
                       "
                     >

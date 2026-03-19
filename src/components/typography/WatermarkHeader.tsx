@@ -1,14 +1,24 @@
+import clsx from "clsx";
+
 interface IProps {
   text: string;
   backText?: string;
+  contrastOnDark?: boolean;
 }
 
-const WatermarkHeader = ({ text, backText = "" }: IProps) => {
+const WatermarkHeader = ({
+  text,
+  backText = "",
+  contrastOnDark = false,
+}: IProps) => {
   return (
     <div className="relative flex items-center justify-center py-6 mb-8 w-full">
       {/* Watermark Background */}
       <div
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-heading text-secondary/10 uppercase text-[15vw] md:text-[8rem] lg:text-[8rem] leading-none whitespace-nowrap pointer-events-none select-none z-0"
+        className={clsx(
+          "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-heading uppercase text-[12vw] md:text-[7rem] leading-none whitespace-nowrap pointer-events-none select-none z-0",
+          contrastOnDark ? "text-white/10" : "text-secondary/10",
+        )}
         aria-hidden="true"
       >
         {backText}
@@ -17,7 +27,10 @@ const WatermarkHeader = ({ text, backText = "" }: IProps) => {
       {/* Primary Text */}
       <h2
         id="introduction-heading"
-        className="relative top-8 z-10 text-[2rem] md:text-[3rem] text-secondary leading-tight font-heading"
+        className={clsx(
+          "relative top-4 md:top-8 z-10 text-[2rem] md:text-[3rem] leading-tight font-heading",
+          contrastOnDark ? "text-white" : "text-secondary",
+        )}
       >
         <span className="relative inline-block z-10">
           {text}

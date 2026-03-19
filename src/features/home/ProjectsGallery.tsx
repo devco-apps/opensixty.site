@@ -49,7 +49,7 @@ const ProjectsGallery = () => {
   return (
     <section className="bg-secondary w-full">
       <div className="relative pt-20 pb-16 w-full flex flex-col justify-center overflow-hidden">
-        <WatermarkHeader text="Projects" backText="Our Latest" />
+        <WatermarkHeader text="Projects" backText="Our Latest" contrastOnDark />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
