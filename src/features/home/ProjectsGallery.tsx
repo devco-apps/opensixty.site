@@ -48,7 +48,7 @@ const projects = [
 const ProjectsGallery = () => {
   return (
     <section className="bg-secondary w-full">
-      <div className="relative pt-20 pb-16 w-full flex flex-col justify-center overflow-hidden border-b border-gray-200">
+      <div className="relative pt-20 pb-16 w-full flex flex-col justify-center overflow-hidden">
         <WatermarkHeader text="Projects" backText="Our Latest" />
       </div>
 
