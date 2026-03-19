@@ -50,7 +50,7 @@ const OurPromise = () => {
                 />
               </div>
               <div className="px-4 pb-4 text-center">
-                <h3 className="text-xl text-secondary font-semibold mb-2">
+                <h3 className="text-xl text-secondary font-heading font-semibold mb-2 ">
                   {promise.name}
                 </h3>
 

@@ -45,7 +45,7 @@ const TransportService = () => {
               <p className="text-primary text-sm uppercase font-semibold tracking-widest mb-4">
                 Our Core Services
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight font-heading">
                 Reliable Freight <br className="hidden md:block" /> Transport
               </h2>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10 font-light">

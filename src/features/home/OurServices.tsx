@@ -229,7 +229,7 @@ const OurServices = () => {
                 <div className="mb-6 text-secondary transform group-hover:-translate-y-1 transition-transform duration-300 [&>svg]:!w-14 [&>svg]:!h-14 [&>svg]:!stroke-1">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-secondary text-left w-full">
+                <h3 className="text-2xl font-bold mb-4 text-secondary text-left w-full font-heading">
                   {service.title}
                 </h3>
                 <p className="text-[15px] text-gray-500 leading-relaxed mb-6 text-left w-full">

@@ -26,7 +26,7 @@ const CallToAction: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center md:text-left"
               >
-                <h2 className="text-4xl md:text-6xl font-bold leading-tight uppercase">
+                <h2 className="text-4xl md:text-6xl font-bold leading-tight uppercase font-heading">
                   Let&apos;s work <br /> together
                 </h2>
               </motion.div>

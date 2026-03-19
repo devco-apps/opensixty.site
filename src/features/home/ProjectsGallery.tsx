@@ -75,7 +75,7 @@ const ProjectsGallery = () => {
               <span className="text-sm md:text-base text-[#1e1e1e] font-medium mb-2 uppercase tracking-wide">
                 {project.category}
               </span>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1e1e1e] uppercase tracking-wider">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1e1e1e] uppercase tracking-wider font-heading">
                 {project.title}
               </h3>
             </div>

@@ -7,7 +7,7 @@ export default function TransportLogisticsPage() {
         <h1 className="text-4xl font-bold tracking-tight">
           Transport & Logistics
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 font-heading">
           Reliable transport and logistics solutions tailored to your needs.
         </p>
       </Section>
