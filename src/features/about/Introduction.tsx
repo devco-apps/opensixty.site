@@ -27,7 +27,7 @@ const Introduction = () => {
                 <p className="text-gray-500 font-semibold tracking-widest uppercase mb-2">
                   ABOUT OPENSIXTY
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-heading text-gray-900 mb-6">
                   Strong Foundations For Better Tomorrow
                 </h2>
                 <p className="text-gray-600 mb-8 text-base">
