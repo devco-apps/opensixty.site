@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Award, Layers, Users, Globe } from "lucide-react";
 
 const metrics = [
@@ -31,7 +33,11 @@ const CompanyMetrics = () => {
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg p-8 text-center border border-gray-200"
+              className="rounded-lg p-8 text-center relative overflow-hidden"
+              style={{
+                background:
+                  "linear-gradient(to top, rgba(255, 135, 9, 0.2) 0%, transparent 70%)",
+              }}
             >
               <div className="flex items-center justify-center mb-4">
                 <div className="text-gray-900">{metric.icon}</div>
@@ -40,9 +46,17 @@ const CompanyMetrics = () => {
                 </p>
               </div>
 
-              <p className="text-gray-600 font-semibold text-lg">
+              <p className="text-gray-600 font-semibold text-lg pb-15">
                 {metric.label}
               </p>
+
+              <Image
+                src="/images/glass-bar.png"
+                alt="Glass bar"
+                width={500}
+                height={100}
+                className="absolute bottom-0 left-0 w-full h-auto object-cover"
+              />
             </div>
           ))}
         </div>
