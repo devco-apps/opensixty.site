@@ -35,7 +35,7 @@ const CompanyMetrics = () => {
             >
               <div className="flex items-center justify-center mb-4">
                 <div className="text-gray-900">{metric.icon}</div>
-                <p className="text-5xl font-bold text-gray-900 ml-4">
+                <p className="text-5xl font-heading text-gray-900 ml-4">
                   {metric.value}
                 </p>
               </div>
