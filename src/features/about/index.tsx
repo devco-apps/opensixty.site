@@ -3,6 +3,7 @@ import CompanyMetrics from "./CompanyMetrics";
 import CompanyValues from "./CompanyValues";
 import CompanyHistory from "./CompanyHistory";
 
+import TransportBanner from "@/features/home/TransportBanner";
 import PartnerLogos from "@/features/home/PartnerLogos";
 
 import { getFilesByPrefix } from "@/lib/server-utils";
@@ -17,6 +18,7 @@ const AboutUsPage = () => {
       <CompanyMetrics />
       <CompanyHistory />
       <PartnerLogos logoPaths={partnerLogos} />
+      <TransportBanner />
     </main>
   );
 };
