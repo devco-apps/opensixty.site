@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Menu, X, MapPin, Phone, ChevronDown, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { services } from "@/lib/services";
 import { cn } from "@/lib/utils";
 
 import { Section } from "@/components/layout/Section";
@@ -26,14 +27,10 @@ const navLinks: NavLink[] = [
     href: "/services",
     label: "Services",
     hasDropdown: true,
-    dropdownItems: [
-      { href: "/services/transport-logistics", label: "Transport & Logistics" },
-      {
-        href: "/services/construction-infrastructure",
-        label: "Construction & Infrastructure",
-      },
-      { href: "/services/commodity-broking", label: "Commodity Broking" },
-    ],
+    dropdownItems: services.map((service) => ({
+      href: `/services/${service.slug}`,
+      label: service.title,
+    })),
   },
   { href: "/projects", label: "Projects", hasDropdown: false },
   { href: "/gallery", label: "Gallery", hasDropdown: false },
