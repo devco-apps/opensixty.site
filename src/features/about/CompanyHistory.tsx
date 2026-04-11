@@ -110,6 +110,7 @@ const CompanyHistory = () => {
           <WatermarkHeader
             text="Our Company Roadmap"
             backText="Construction History"
+            contrastOnDark
           />
           <p className="text-gray-400 mt-4 mx-auto text-lg max-w-3xl">
             We believe that every business is unique and our approach is never
