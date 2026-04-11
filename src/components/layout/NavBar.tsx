@@ -33,7 +33,6 @@ const navLinks: NavLink[] = [
     })),
   },
   { href: "/projects", label: "Projects", hasDropdown: false },
-  { href: "/gallery", label: "Gallery", hasDropdown: false },
   { href: "/contact", label: "Contact", hasDropdown: false },
 ];
 
