@@ -1,3 +1,4 @@
+import { GoogleReCaptchaProvider } from "@/components/providers/GoogleReCaptchaProvider";
 import type { Metadata } from "next";
 import { Abril_Fatface, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -66,10 +67,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${abrilFatface.variable} antialiased flex flex-col min-h-screen`}
       >
-        <NavBar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <ScrollToTop />
+        <GoogleReCaptchaProvider>
+          <NavBar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <ScrollToTop />
+        </GoogleReCaptchaProvider>
       </body>
     </html>
   );
