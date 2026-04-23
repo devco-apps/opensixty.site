@@ -144,7 +144,7 @@ const CompanyHistory = () => {
               {timelineData.map((item, index) => (
                 <div
                   key={item.id}
-                  className="timeline-item pl-12 md:pl-0 relative group"
+                  className="timeline-item md:pl-0 relative group"
                   style={{
                     opacity: visibleItems.includes(index) ? 1 : 0,
                     transform: visibleItems.includes(index)
