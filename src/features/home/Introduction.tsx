@@ -59,7 +59,7 @@ const Introduction: React.FC = () => {
             alt="Construction machinery operating on a road"
             fill
             className="object-contain object-bottom w-full h-full z-20"
-            sizes="(max-width: 800px) 100vw, 50vw"
+            sizes="(max-width: 800px) 100%, 50vw"
             priority={false}
           />
         </motion.div>

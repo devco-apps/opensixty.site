@@ -15,7 +15,7 @@ const TransportBanner = () => {
             alt="Open Sixty (Pvt) Ltd"
             width={200}
             height={600}
-            sizes="(max-width: 768px) 100vw, 700px"
+            sizes="(max-width: 768px) 100%, 700px"
             className="w-full h-auto max-h-[200px] object-contain"
           />
         </div>

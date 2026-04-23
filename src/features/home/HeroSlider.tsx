@@ -212,7 +212,7 @@ const HeroSlider = () => {
                     fill
                     className="object-cover"
                     priority={colIdx === 0}
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100%, 33vw"
                   />
                 </motion.div>
               </AnimatePresence>

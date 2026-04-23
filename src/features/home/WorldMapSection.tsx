@@ -19,7 +19,7 @@ const WorldMapSection = () => {
             alt="World map showing OpenSixty's global reach"
             className="object-cover"
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100%, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute bottom-8 left-8 max-w-sm p-6 bg-white/70 text-gray-900 rounded-xl shadow-lg backdrop-blur-sm">
             <h3 className="text-2xl font-bold mb-2 font-heading">
