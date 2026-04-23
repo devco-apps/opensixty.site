@@ -12,11 +12,11 @@ const WatermarkHeader = ({
   contrastOnDark = false,
 }: IProps) => {
   return (
-    <div className="relative flex items-center justify-center py-6 mb-8 w-full">
+    <div className="relative flex items-center justify-center py-6 mb-8 w-full overflow-hidden">
       {/* Watermark Background */}
       <div
         className={clsx(
-          "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-heading uppercase text-[12vw] md:text-[7rem] leading-none whitespace-nowrap pointer-events-none select-none z-0",
+          "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-heading uppercase text-[10vw] md:text-[7rem] leading-none whitespace-nowrap pointer-events-none select-none z-0",
           contrastOnDark ? "text-white/10" : "text-secondary/10",
         )}
         aria-hidden="true"
