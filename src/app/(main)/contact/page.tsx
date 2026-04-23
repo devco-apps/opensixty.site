@@ -19,7 +19,7 @@ export default function ContactPage() {
     <div className="bg-white">
       <Section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-3xl text-center mb-16">
             <WatermarkHeader text="Today" backText="Get in touch" />
 
             <p className="mt-2 text-lg leading-8 text-gray-600">
